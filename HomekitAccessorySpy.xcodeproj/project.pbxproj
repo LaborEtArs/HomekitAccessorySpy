@@ -1,0 +1,796 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E6421BC51FBF679B0077DC8F /* HASAccessoryViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E6421BC41FBF679B0077DC8F /* HASAccessoryViewController.mm */; };
+		E69A3C9B1FC1748900B3DAEA /* LEAProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E69A3C9A1FC1748900B3DAEA /* LEAProgressHUD.m */; };
+		E6B4720B1FBF00A6004FDF70 /* HASAccessoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B472091FBF00A6004FDF70 /* HASAccessoryTableViewController.m */; };
+		E6DD65901FC4742B005128BD /* HASSetupCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6DD658F1FC4742B005128BD /* HASSetupCodeViewController.m */; };
+		E6EDA3D41FBE100B0013F95A /* HASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA3D31FBE100B0013F95A /* HASAppDelegate.m */; };
+		E6EDA3DA1FBE100B0013F95A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EDA3D81FBE100B0013F95A /* Main.storyboard */; };
+		E6EDA3DD1FBE100B0013F95A /* HomekitAccessorySpy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA3DB1FBE100B0013F95A /* HomekitAccessorySpy.xcdatamodeld */; };
+		E6EDA3DF1FBE100B0013F95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EDA3DE1FBE100B0013F95A /* Assets.xcassets */; };
+		E6EDA3E21FBE100B0013F95A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6EDA3E01FBE100B0013F95A /* LaunchScreen.storyboard */; };
+		E6EDA3E51FBE100B0013F95A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA3E41FBE100B0013F95A /* main.m */; };
+		E6EDA3FA1FBE12DD0013F95A /* HASAddAccessoryTableViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA3F91FBE12DD0013F95A /* HASAddAccessoryTableViewController.mm */; };
+		E6EDA4001FBE13230013F95A /* HAPTCPIPConnection.mm in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA3FF1FBE13230013F95A /* HAPTCPIPConnection.mm */; };
+		E6EDA4511FBE13950013F95A /* GCM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4021FBE13930013F95A /* GCM.cpp */; };
+		E6EDA4521FBE13950013F95A /* Hash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4041FBE13930013F95A /* Hash.cpp */; };
+		E6EDA4531FBE13950013F95A /* Ed25519.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4051FBE13930013F95A /* Ed25519.cpp */; };
+		E6EDA4541FBE13950013F95A /* XTS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA40B1FBE13930013F95A /* XTS.cpp */; };
+		E6EDA4551FBE13950013F95A /* OMAC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA40E1FBE13930013F95A /* OMAC.cpp */; };
+		E6EDA4561FBE13950013F95A /* AuthenticatedCipher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4111FBE13930013F95A /* AuthenticatedCipher.cpp */; };
+		E6EDA4571FBE13950013F95A /* RNG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4141FBE13930013F95A /* RNG.cpp */; };
+		E6EDA4581FBE13950013F95A /* Crypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4151FBE13930013F95A /* Crypto.cpp */; };
+		E6EDA4591FBE13950013F95A /* SpeckTiny.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4191FBE13930013F95A /* SpeckTiny.cpp */; };
+		E6EDA45A1FBE13950013F95A /* Cipher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA41A1FBE13930013F95A /* Cipher.cpp */; };
+		E6EDA45B1FBE13950013F95A /* SHA512.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA41D1FBE13930013F95A /* SHA512.cpp */; };
+		E6EDA45C1FBE13950013F95A /* CFB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA41E1FBE13930013F95A /* CFB.cpp */; };
+		E6EDA45D1FBE13950013F95A /* NoiseSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA41F1FBE13930013F95A /* NoiseSource.cpp */; };
+		E6EDA45E1FBE13950013F95A /* AES128.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4231FBE13930013F95A /* AES128.cpp */; };
+		E6EDA45F1FBE13950013F95A /* BLAKE2b.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4241FBE13930013F95A /* BLAKE2b.cpp */; };
+		E6EDA4601FBE13950013F95A /* OFB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4251FBE13940013F95A /* OFB.cpp */; };
+		E6EDA4611FBE13950013F95A /* P521.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4291FBE13940013F95A /* P521.cpp */; };
+		E6EDA4621FBE13950013F95A /* ChaCha.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA42A1FBE13940013F95A /* ChaCha.cpp */; };
+		E6EDA4631FBE13950013F95A /* SHA3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA42B1FBE13940013F95A /* SHA3.cpp */; };
+		E6EDA4641FBE13950013F95A /* AES192.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA42E1FBE13940013F95A /* AES192.cpp */; };
+		E6EDA4651FBE13950013F95A /* AESCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4301FBE13940013F95A /* AESCommon.cpp */; };
+		E6EDA4661FBE13950013F95A /* AES256.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4311FBE13940013F95A /* AES256.cpp */; };
+		E6EDA4671FBE13950013F95A /* ChaChaPoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4331FBE13940013F95A /* ChaChaPoly.cpp */; };
+		E6EDA4681FBE13950013F95A /* SHA256.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4341FBE13940013F95A /* SHA256.cpp */; };
+		E6EDA4691FBE13950013F95A /* SpeckSmall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4371FBE13940013F95A /* SpeckSmall.cpp */; };
+		E6EDA46A1FBE13950013F95A /* EAX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4381FBE13940013F95A /* EAX.cpp */; };
+		E6EDA46B1FBE13950013F95A /* CTR.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA43C1FBE13940013F95A /* CTR.cpp */; };
+		E6EDA46C1FBE13950013F95A /* BlockCipher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA43D1FBE13940013F95A /* BlockCipher.cpp */; };
+		E6EDA46D1FBE13950013F95A /* Poly1305.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA43F1FBE13940013F95A /* Poly1305.cpp */; };
+		E6EDA46E1FBE13950013F95A /* Speck.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4401FBE13940013F95A /* Speck.cpp */; };
+		E6EDA46F1FBE13950013F95A /* KeccakCore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4421FBE13940013F95A /* KeccakCore.cpp */; };
+		E6EDA4701FBE13950013F95A /* XOF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4431FBE13940013F95A /* XOF.cpp */; };
+		E6EDA4711FBE13950013F95A /* CBC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4451FBE13940013F95A /* CBC.cpp */; };
+		E6EDA4721FBE13950013F95A /* Curve25519.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4461FBE13940013F95A /* Curve25519.cpp */; };
+		E6EDA4731FBE13950013F95A /* GHASH.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4471FBE13940013F95A /* GHASH.cpp */; };
+		E6EDA4741FBE13950013F95A /* BLAKE2s.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4481FBE13950013F95A /* BLAKE2s.cpp */; };
+		E6EDA4751FBE13950013F95A /* GF128.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4491FBE13950013F95A /* GF128.cpp */; };
+		E6EDA4761FBE13950013F95A /* BigNumberUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA44D1FBE13950013F95A /* BigNumberUtil.cpp */; };
+		E6EDA4771FBE13950013F95A /* SHAKE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA44F1FBE13950013F95A /* SHAKE.cpp */; };
+		E6EDA47A1FBE13B10013F95A /* HMAC+HKDF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4791FBE13B10013F95A /* HMAC+HKDF.cpp */; };
+		E6EDA47D1FBE13BA0013F95A /* mini-gmp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA47B1FBE13BA0013F95A /* mini-gmp.cpp */; };
+		E6EDA4821FBE13C50013F95A /* SRP6aClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA47E1FBE13C40013F95A /* SRP6aClient.cpp */; };
+		E6EDA4831FBE13C50013F95A /* SRP6aServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA4801FBE13C40013F95A /* SRP6aServer.cpp */; };
+		E6EDA4911FBE13DA0013F95A /* TLV8.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6EDA48F1FBE13DA0013F95A /* TLV8.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E6421BC31FBF679B0077DC8F /* HASAccessoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HASAccessoryViewController.h; sourceTree = "<group>"; };
+		E6421BC41FBF679B0077DC8F /* HASAccessoryViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HASAccessoryViewController.mm; sourceTree = "<group>"; };
+		E69A3C991FC1748900B3DAEA /* LEAProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEAProgressHUD.h; sourceTree = "<group>"; };
+		E69A3C9A1FC1748900B3DAEA /* LEAProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEAProgressHUD.m; sourceTree = "<group>"; };
+		E6B472091FBF00A6004FDF70 /* HASAccessoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HASAccessoryTableViewController.m; path = HomekitAccessorySpy/AccessoryTableViewController/HASAccessoryTableViewController.m; sourceTree = SOURCE_ROOT; };
+		E6B4720A1FBF00A6004FDF70 /* HASAccessoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HASAccessoryTableViewController.h; path = HomekitAccessorySpy/AccessoryTableViewController/HASAccessoryTableViewController.h; sourceTree = SOURCE_ROOT; };
+		E6DD658E1FC4742B005128BD /* HASSetupCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HASSetupCodeViewController.h; sourceTree = "<group>"; };
+		E6DD658F1FC4742B005128BD /* HASSetupCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HASSetupCodeViewController.m; sourceTree = "<group>"; };
+		E6EDA3CF1FBE100B0013F95A /* HomekitAccessorySpy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomekitAccessorySpy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6EDA3D21FBE100B0013F95A /* HASAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HASAppDelegate.h; sourceTree = "<group>"; };
+		E6EDA3D31FBE100B0013F95A /* HASAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HASAppDelegate.m; sourceTree = "<group>"; };
+		E6EDA3D91FBE100B0013F95A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E6EDA3DC1FBE100B0013F95A /* HomekitAccessorySpy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomekitAccessorySpy.xcdatamodel; sourceTree = "<group>"; };
+		E6EDA3DE1FBE100B0013F95A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6EDA3E11FBE100B0013F95A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E6EDA3E31FBE100B0013F95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6EDA3E41FBE100B0013F95A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E6EDA3F91FBE12DD0013F95A /* HASAddAccessoryTableViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HASAddAccessoryTableViewController.mm; sourceTree = "<group>"; };
+		E6EDA3FB1FBE12E60013F95A /* HASAddAccessoryTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HASAddAccessoryTableViewController.h; sourceTree = "<group>"; };
+		E6EDA3FE1FBE131B0013F95A /* HAPTCPIPConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HAPTCPIPConnection.h; sourceTree = "<group>"; };
+		E6EDA3FF1FBE13230013F95A /* HAPTCPIPConnection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HAPTCPIPConnection.mm; sourceTree = "<group>"; };
+		E6EDA4011FBE13930013F95A /* BlockCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockCipher.h; sourceTree = "<group>"; };
+		E6EDA4021FBE13930013F95A /* GCM.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GCM.cpp; sourceTree = "<group>"; };
+		E6EDA4031FBE13930013F95A /* Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
+		E6EDA4041FBE13930013F95A /* Hash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hash.cpp; sourceTree = "<group>"; };
+		E6EDA4051FBE13930013F95A /* Ed25519.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ed25519.cpp; sourceTree = "<group>"; };
+		E6EDA4071FBE13930013F95A /* ProgMemUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgMemUtil.h; sourceTree = "<group>"; };
+		E6EDA4081FBE13930013F95A /* EndianUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndianUtil.h; sourceTree = "<group>"; };
+		E6EDA4091FBE13930013F95A /* RotateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotateUtil.h; sourceTree = "<group>"; };
+		E6EDA40A1FBE13930013F95A /* LimbUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimbUtil.h; sourceTree = "<group>"; };
+		E6EDA40B1FBE13930013F95A /* XTS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XTS.cpp; sourceTree = "<group>"; };
+		E6EDA40C1FBE13930013F95A /* XOF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XOF.h; sourceTree = "<group>"; };
+		E6EDA40D1FBE13930013F95A /* SpeckTiny.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeckTiny.h; sourceTree = "<group>"; };
+		E6EDA40E1FBE13930013F95A /* OMAC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OMAC.cpp; sourceTree = "<group>"; };
+		E6EDA40F1FBE13930013F95A /* OFB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFB.h; sourceTree = "<group>"; };
+		E6EDA4101FBE13930013F95A /* GCM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCM.h; sourceTree = "<group>"; };
+		E6EDA4111FBE13930013F95A /* AuthenticatedCipher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AuthenticatedCipher.cpp; sourceTree = "<group>"; };
+		E6EDA4121FBE13930013F95A /* SHA512.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHA512.h; sourceTree = "<group>"; };
+		E6EDA4131FBE13930013F95A /* Ed25519.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ed25519.h; sourceTree = "<group>"; };
+		E6EDA4141FBE13930013F95A /* RNG.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RNG.cpp; sourceTree = "<group>"; };
+		E6EDA4151FBE13930013F95A /* Crypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Crypto.cpp; sourceTree = "<group>"; };
+		E6EDA4161FBE13930013F95A /* BigNumberUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigNumberUtil.h; sourceTree = "<group>"; };
+		E6EDA4171FBE13930013F95A /* RNG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNG.h; sourceTree = "<group>"; };
+		E6EDA4181FBE13930013F95A /* Curve25519.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Curve25519.h; sourceTree = "<group>"; };
+		E6EDA4191FBE13930013F95A /* SpeckTiny.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpeckTiny.cpp; sourceTree = "<group>"; };
+		E6EDA41A1FBE13930013F95A /* Cipher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cipher.cpp; sourceTree = "<group>"; };
+		E6EDA41B1FBE13930013F95A /* NoiseSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoiseSource.h; sourceTree = "<group>"; };
+		E6EDA41C1FBE13930013F95A /* OMAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OMAC.h; sourceTree = "<group>"; };
+		E6EDA41D1FBE13930013F95A /* SHA512.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SHA512.cpp; sourceTree = "<group>"; };
+		E6EDA41E1FBE13930013F95A /* CFB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CFB.cpp; sourceTree = "<group>"; };
+		E6EDA41F1FBE13930013F95A /* NoiseSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NoiseSource.cpp; sourceTree = "<group>"; };
+		E6EDA4201FBE13930013F95A /* GF128.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GF128.h; sourceTree = "<group>"; };
+		E6EDA4211FBE13930013F95A /* CFB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFB.h; sourceTree = "<group>"; };
+		E6EDA4221FBE13930013F95A /* P521.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P521.h; sourceTree = "<group>"; };
+		E6EDA4231FBE13930013F95A /* AES128.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AES128.cpp; sourceTree = "<group>"; };
+		E6EDA4241FBE13930013F95A /* BLAKE2b.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BLAKE2b.cpp; sourceTree = "<group>"; };
+		E6EDA4251FBE13940013F95A /* OFB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OFB.cpp; sourceTree = "<group>"; };
+		E6EDA4261FBE13940013F95A /* BLAKE2b.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAKE2b.h; sourceTree = "<group>"; };
+		E6EDA4271FBE13940013F95A /* Poly1305.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poly1305.h; sourceTree = "<group>"; };
+		E6EDA4281FBE13940013F95A /* SHAKE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAKE.h; sourceTree = "<group>"; };
+		E6EDA4291FBE13940013F95A /* P521.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = P521.cpp; sourceTree = "<group>"; };
+		E6EDA42A1FBE13940013F95A /* ChaCha.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChaCha.cpp; sourceTree = "<group>"; };
+		E6EDA42B1FBE13940013F95A /* SHA3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SHA3.cpp; sourceTree = "<group>"; };
+		E6EDA42C1FBE13940013F95A /* AuthenticatedCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticatedCipher.h; sourceTree = "<group>"; };
+		E6EDA42D1FBE13940013F95A /* SHA3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHA3.h; sourceTree = "<group>"; };
+		E6EDA42E1FBE13940013F95A /* AES192.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AES192.cpp; sourceTree = "<group>"; };
+		E6EDA42F1FBE13940013F95A /* BLAKE2s.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLAKE2s.h; sourceTree = "<group>"; };
+		E6EDA4301FBE13940013F95A /* AESCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AESCommon.cpp; sourceTree = "<group>"; };
+		E6EDA4311FBE13940013F95A /* AES256.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AES256.cpp; sourceTree = "<group>"; };
+		E6EDA4321FBE13940013F95A /* EAX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAX.h; sourceTree = "<group>"; };
+		E6EDA4331FBE13940013F95A /* ChaChaPoly.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChaChaPoly.cpp; sourceTree = "<group>"; };
+		E6EDA4341FBE13940013F95A /* SHA256.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SHA256.cpp; sourceTree = "<group>"; };
+		E6EDA4351FBE13940013F95A /* Cipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cipher.h; sourceTree = "<group>"; };
+		E6EDA4361FBE13940013F95A /* CBC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBC.h; sourceTree = "<group>"; };
+		E6EDA4371FBE13940013F95A /* SpeckSmall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpeckSmall.cpp; sourceTree = "<group>"; };
+		E6EDA4381FBE13940013F95A /* EAX.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EAX.cpp; sourceTree = "<group>"; };
+		E6EDA4391FBE13940013F95A /* XTS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTS.h; sourceTree = "<group>"; };
+		E6EDA43A1FBE13940013F95A /* ChaCha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaCha.h; sourceTree = "<group>"; };
+		E6EDA43B1FBE13940013F95A /* ChaChaPoly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaChaPoly.h; sourceTree = "<group>"; };
+		E6EDA43C1FBE13940013F95A /* CTR.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTR.cpp; sourceTree = "<group>"; };
+		E6EDA43D1FBE13940013F95A /* BlockCipher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlockCipher.cpp; sourceTree = "<group>"; };
+		E6EDA43E1FBE13940013F95A /* CTR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTR.h; sourceTree = "<group>"; };
+		E6EDA43F1FBE13940013F95A /* Poly1305.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Poly1305.cpp; sourceTree = "<group>"; };
+		E6EDA4401FBE13940013F95A /* Speck.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Speck.cpp; sourceTree = "<group>"; };
+		E6EDA4411FBE13940013F95A /* Speck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Speck.h; sourceTree = "<group>"; };
+		E6EDA4421FBE13940013F95A /* KeccakCore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeccakCore.cpp; sourceTree = "<group>"; };
+		E6EDA4431FBE13940013F95A /* XOF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XOF.cpp; sourceTree = "<group>"; };
+		E6EDA4441FBE13940013F95A /* AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AES.h; sourceTree = "<group>"; };
+		E6EDA4451FBE13940013F95A /* CBC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CBC.cpp; sourceTree = "<group>"; };
+		E6EDA4461FBE13940013F95A /* Curve25519.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Curve25519.cpp; sourceTree = "<group>"; };
+		E6EDA4471FBE13940013F95A /* GHASH.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GHASH.cpp; sourceTree = "<group>"; };
+		E6EDA4481FBE13950013F95A /* BLAKE2s.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BLAKE2s.cpp; sourceTree = "<group>"; };
+		E6EDA4491FBE13950013F95A /* GF128.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GF128.cpp; sourceTree = "<group>"; };
+		E6EDA44A1FBE13950013F95A /* SHA256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHA256.h; sourceTree = "<group>"; };
+		E6EDA44B1FBE13950013F95A /* Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hash.h; sourceTree = "<group>"; };
+		E6EDA44C1FBE13950013F95A /* KeccakCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeccakCore.h; sourceTree = "<group>"; };
+		E6EDA44D1FBE13950013F95A /* BigNumberUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BigNumberUtil.cpp; sourceTree = "<group>"; };
+		E6EDA44E1FBE13950013F95A /* GHASH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHASH.h; sourceTree = "<group>"; };
+		E6EDA44F1FBE13950013F95A /* SHAKE.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SHAKE.cpp; sourceTree = "<group>"; };
+		E6EDA4501FBE13950013F95A /* SpeckSmall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeckSmall.h; sourceTree = "<group>"; };
+		E6EDA4781FBE13B10013F95A /* HMAC+HKDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HMAC+HKDF.h"; sourceTree = "<group>"; };
+		E6EDA4791FBE13B10013F95A /* HMAC+HKDF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "HMAC+HKDF.cpp"; sourceTree = "<group>"; };
+		E6EDA47B1FBE13BA0013F95A /* mini-gmp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "mini-gmp.cpp"; sourceTree = "<group>"; };
+		E6EDA47C1FBE13BA0013F95A /* mini-gmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "mini-gmp.h"; sourceTree = "<group>"; };
+		E6EDA47E1FBE13C40013F95A /* SRP6aClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SRP6aClient.cpp; sourceTree = "<group>"; };
+		E6EDA47F1FBE13C40013F95A /* SRP6aServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRP6aServer.h; sourceTree = "<group>"; };
+		E6EDA4801FBE13C40013F95A /* SRP6aServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SRP6aServer.cpp; sourceTree = "<group>"; };
+		E6EDA4811FBE13C50013F95A /* SRP6aClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRP6aClient.h; sourceTree = "<group>"; };
+		E6EDA48F1FBE13DA0013F95A /* TLV8.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TLV8.cpp; sourceTree = "<group>"; };
+		E6EDA4901FBE13DA0013F95A /* TLV8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLV8.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6EDA3CC1FBE100B0013F95A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6421BC21FBF67670077DC8F /* AccessoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E6421BC31FBF679B0077DC8F /* HASAccessoryViewController.h */,
+				E6421BC41FBF679B0077DC8F /* HASAccessoryViewController.mm */,
+			);
+			path = AccessoryViewController;
+			sourceTree = "<group>";
+		};
+		E69A3C981FC1745D00B3DAEA /* Progress HUD */ = {
+			isa = PBXGroup;
+			children = (
+				E69A3C991FC1748900B3DAEA /* LEAProgressHUD.h */,
+				E69A3C9A1FC1748900B3DAEA /* LEAProgressHUD.m */,
+			);
+			name = "Progress HUD";
+			sourceTree = "<group>";
+		};
+		E6B472081FBF0090004FDF70 /* AccessoryTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E6B4720A1FBF00A6004FDF70 /* HASAccessoryTableViewController.h */,
+				E6B472091FBF00A6004FDF70 /* HASAccessoryTableViewController.m */,
+			);
+			name = AccessoryTableViewController;
+			path = AccessoryViewController;
+			sourceTree = "<group>";
+		};
+		E6DD65911FC47503005128BD /* SetupCodeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E6DD658E1FC4742B005128BD /* HASSetupCodeViewController.h */,
+				E6DD658F1FC4742B005128BD /* HASSetupCodeViewController.m */,
+			);
+			path = SetupCodeViewController;
+			sourceTree = "<group>";
+		};
+		E6EDA3C61FBE100B0013F95A = {
+			isa = PBXGroup;
+			children = (
+				E6EDA3D11FBE100B0013F95A /* HomekitAccessorySpy */,
+				E6EDA3D01FBE100B0013F95A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6EDA3D01FBE100B0013F95A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA3CF1FBE100B0013F95A /* HomekitAccessorySpy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6EDA3D11FBE100B0013F95A /* HomekitAccessorySpy */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA3F41FBE10B30013F95A /* Model */,
+				E6EDA3EF1FBE10830013F95A /* UI */,
+				E6EDA3F01FBE10890013F95A /* AppDelegate */,
+				E6EDA3F71FBE12720013F95A /* View Controller */,
+				E6EDA3FC1FBE12F30013F95A /* Helpers */,
+				E6EDA3F61FBE12320013F95A /* HAP */,
+				E6EDA3F51FBE10EC0013F95A /* Supporting Files */,
+			);
+			path = HomekitAccessorySpy;
+			sourceTree = "<group>";
+		};
+		E6EDA3EB1FBE10570013F95A /* HMAC+HKDF */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA4791FBE13B10013F95A /* HMAC+HKDF.cpp */,
+				E6EDA4781FBE13B10013F95A /* HMAC+HKDF.h */,
+			);
+			path = "HMAC+HKDF";
+			sourceTree = "<group>";
+		};
+		E6EDA3EC1FBE10640013F95A /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA4441FBE13940013F95A /* AES.h */,
+				E6EDA4231FBE13930013F95A /* AES128.cpp */,
+				E6EDA42E1FBE13940013F95A /* AES192.cpp */,
+				E6EDA4311FBE13940013F95A /* AES256.cpp */,
+				E6EDA4301FBE13940013F95A /* AESCommon.cpp */,
+				E6EDA4111FBE13930013F95A /* AuthenticatedCipher.cpp */,
+				E6EDA42C1FBE13940013F95A /* AuthenticatedCipher.h */,
+				E6EDA44D1FBE13950013F95A /* BigNumberUtil.cpp */,
+				E6EDA4161FBE13930013F95A /* BigNumberUtil.h */,
+				E6EDA4241FBE13930013F95A /* BLAKE2b.cpp */,
+				E6EDA4261FBE13940013F95A /* BLAKE2b.h */,
+				E6EDA4481FBE13950013F95A /* BLAKE2s.cpp */,
+				E6EDA42F1FBE13940013F95A /* BLAKE2s.h */,
+				E6EDA43D1FBE13940013F95A /* BlockCipher.cpp */,
+				E6EDA4011FBE13930013F95A /* BlockCipher.h */,
+				E6EDA4451FBE13940013F95A /* CBC.cpp */,
+				E6EDA4361FBE13940013F95A /* CBC.h */,
+				E6EDA41E1FBE13930013F95A /* CFB.cpp */,
+				E6EDA4211FBE13930013F95A /* CFB.h */,
+				E6EDA42A1FBE13940013F95A /* ChaCha.cpp */,
+				E6EDA43A1FBE13940013F95A /* ChaCha.h */,
+				E6EDA4331FBE13940013F95A /* ChaChaPoly.cpp */,
+				E6EDA43B1FBE13940013F95A /* ChaChaPoly.h */,
+				E6EDA41A1FBE13930013F95A /* Cipher.cpp */,
+				E6EDA4351FBE13940013F95A /* Cipher.h */,
+				E6EDA4151FBE13930013F95A /* Crypto.cpp */,
+				E6EDA4031FBE13930013F95A /* Crypto.h */,
+				E6EDA43C1FBE13940013F95A /* CTR.cpp */,
+				E6EDA43E1FBE13940013F95A /* CTR.h */,
+				E6EDA4461FBE13940013F95A /* Curve25519.cpp */,
+				E6EDA4181FBE13930013F95A /* Curve25519.h */,
+				E6EDA4381FBE13940013F95A /* EAX.cpp */,
+				E6EDA4321FBE13940013F95A /* EAX.h */,
+				E6EDA4051FBE13930013F95A /* Ed25519.cpp */,
+				E6EDA4131FBE13930013F95A /* Ed25519.h */,
+				E6EDA4021FBE13930013F95A /* GCM.cpp */,
+				E6EDA4101FBE13930013F95A /* GCM.h */,
+				E6EDA4491FBE13950013F95A /* GF128.cpp */,
+				E6EDA4201FBE13930013F95A /* GF128.h */,
+				E6EDA4471FBE13940013F95A /* GHASH.cpp */,
+				E6EDA44E1FBE13950013F95A /* GHASH.h */,
+				E6EDA4041FBE13930013F95A /* Hash.cpp */,
+				E6EDA44B1FBE13950013F95A /* Hash.h */,
+				E6EDA4421FBE13940013F95A /* KeccakCore.cpp */,
+				E6EDA44C1FBE13950013F95A /* KeccakCore.h */,
+				E6EDA41F1FBE13930013F95A /* NoiseSource.cpp */,
+				E6EDA41B1FBE13930013F95A /* NoiseSource.h */,
+				E6EDA4251FBE13940013F95A /* OFB.cpp */,
+				E6EDA40F1FBE13930013F95A /* OFB.h */,
+				E6EDA40E1FBE13930013F95A /* OMAC.cpp */,
+				E6EDA41C1FBE13930013F95A /* OMAC.h */,
+				E6EDA4291FBE13940013F95A /* P521.cpp */,
+				E6EDA4221FBE13930013F95A /* P521.h */,
+				E6EDA43F1FBE13940013F95A /* Poly1305.cpp */,
+				E6EDA4271FBE13940013F95A /* Poly1305.h */,
+				E6EDA4141FBE13930013F95A /* RNG.cpp */,
+				E6EDA4171FBE13930013F95A /* RNG.h */,
+				E6EDA42B1FBE13940013F95A /* SHA3.cpp */,
+				E6EDA42D1FBE13940013F95A /* SHA3.h */,
+				E6EDA4341FBE13940013F95A /* SHA256.cpp */,
+				E6EDA44A1FBE13950013F95A /* SHA256.h */,
+				E6EDA41D1FBE13930013F95A /* SHA512.cpp */,
+				E6EDA4121FBE13930013F95A /* SHA512.h */,
+				E6EDA44F1FBE13950013F95A /* SHAKE.cpp */,
+				E6EDA4281FBE13940013F95A /* SHAKE.h */,
+				E6EDA4401FBE13940013F95A /* Speck.cpp */,
+				E6EDA4411FBE13940013F95A /* Speck.h */,
+				E6EDA4371FBE13940013F95A /* SpeckSmall.cpp */,
+				E6EDA4501FBE13950013F95A /* SpeckSmall.h */,
+				E6EDA4191FBE13930013F95A /* SpeckTiny.cpp */,
+				E6EDA40D1FBE13930013F95A /* SpeckTiny.h */,
+				E6EDA4061FBE13930013F95A /* utility */,
+				E6EDA4431FBE13940013F95A /* XOF.cpp */,
+				E6EDA40C1FBE13930013F95A /* XOF.h */,
+				E6EDA40B1FBE13930013F95A /* XTS.cpp */,
+				E6EDA4391FBE13940013F95A /* XTS.h */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		E6EDA3ED1FBE106C0013F95A /* Mini-GMP */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA47B1FBE13BA0013F95A /* mini-gmp.cpp */,
+				E6EDA47C1FBE13BA0013F95A /* mini-gmp.h */,
+			);
+			path = "Mini-GMP";
+			sourceTree = "<group>";
+		};
+		E6EDA3EF1FBE10830013F95A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA3D81FBE100B0013F95A /* Main.storyboard */,
+				E6EDA3DE1FBE100B0013F95A /* Assets.xcassets */,
+				E6EDA3E01FBE100B0013F95A /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E6EDA3F01FBE10890013F95A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA3D21FBE100B0013F95A /* HASAppDelegate.h */,
+				E6EDA3D31FBE100B0013F95A /* HASAppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		E6EDA3F11FBE10910013F95A /* TLV */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA48F1FBE13DA0013F95A /* TLV8.cpp */,
+				E6EDA4901FBE13DA0013F95A /* TLV8.h */,
+			);
+			path = TLV;
+			sourceTree = "<group>";
+		};
+		E6EDA3F21FBE109E0013F95A /* SRP */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA47E1FBE13C40013F95A /* SRP6aClient.cpp */,
+				E6EDA4811FBE13C50013F95A /* SRP6aClient.h */,
+				E6EDA4801FBE13C40013F95A /* SRP6aServer.cpp */,
+				E6EDA47F1FBE13C40013F95A /* SRP6aServer.h */,
+			);
+			path = SRP;
+			sourceTree = "<group>";
+		};
+		E6EDA3F41FBE10B30013F95A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA3DB1FBE100B0013F95A /* HomekitAccessorySpy.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E6EDA3F51FBE10EC0013F95A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA3E31FBE100B0013F95A /* Info.plist */,
+				E6EDA3E41FBE100B0013F95A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E6EDA3F61FBE12320013F95A /* HAP */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA3EB1FBE10570013F95A /* HMAC+HKDF */,
+				E6EDA3EC1FBE10640013F95A /* Crypto */,
+				E6EDA3ED1FBE106C0013F95A /* Mini-GMP */,
+				E6EDA3F11FBE10910013F95A /* TLV */,
+				E6EDA3F21FBE109E0013F95A /* SRP */,
+			);
+			name = HAP;
+			sourceTree = "<group>";
+		};
+		E6EDA3F71FBE12720013F95A /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E6DD65911FC47503005128BD /* SetupCodeViewController */,
+				E6B472081FBF0090004FDF70 /* AccessoryTableViewController */,
+				E6EDA3F81FBE12A40013F95A /* AddAccessoryTableViewController */,
+				E6421BC21FBF67670077DC8F /* AccessoryViewController */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		E6EDA3F81FBE12A40013F95A /* AddAccessoryTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA3FB1FBE12E60013F95A /* HASAddAccessoryTableViewController.h */,
+				E6EDA3F91FBE12DD0013F95A /* HASAddAccessoryTableViewController.mm */,
+			);
+			path = AddAccessoryTableViewController;
+			sourceTree = "<group>";
+		};
+		E6EDA3FC1FBE12F30013F95A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E69A3C981FC1745D00B3DAEA /* Progress HUD */,
+				E6EDA3FD1FBE13070013F95A /* HAPTCPIPConnection */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E6EDA3FD1FBE13070013F95A /* HAPTCPIPConnection */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA3FE1FBE131B0013F95A /* HAPTCPIPConnection.h */,
+				E6EDA3FF1FBE13230013F95A /* HAPTCPIPConnection.mm */,
+			);
+			name = HAPTCPIPConnection;
+			sourceTree = "<group>";
+		};
+		E6EDA4061FBE13930013F95A /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDA4071FBE13930013F95A /* ProgMemUtil.h */,
+				E6EDA4081FBE13930013F95A /* EndianUtil.h */,
+				E6EDA4091FBE13930013F95A /* RotateUtil.h */,
+				E6EDA40A1FBE13930013F95A /* LimbUtil.h */,
+			);
+			path = utility;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6EDA3CE1FBE100B0013F95A /* HomekitAccessorySpy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6EDA3E81FBE100B0013F95A /* Build configuration list for PBXNativeTarget "HomekitAccessorySpy" */;
+			buildPhases = (
+				E6EDA3CB1FBE100B0013F95A /* Sources */,
+				E6EDA3CC1FBE100B0013F95A /* Frameworks */,
+				E6EDA3CD1FBE100B0013F95A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HomekitAccessorySpy;
+			productName = HomekitAccessorySpy;
+			productReference = E6EDA3CF1FBE100B0013F95A /* HomekitAccessorySpy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6EDA3C71FBE100B0013F95A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = LaborEtArs;
+				TargetAttributes = {
+					E6EDA3CE1FBE100B0013F95A = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = E6EDA3CA1FBE100B0013F95A /* Build configuration list for PBXProject "HomekitAccessorySpy" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+			);
+			mainGroup = E6EDA3C61FBE100B0013F95A;
+			productRefGroup = E6EDA3D01FBE100B0013F95A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6EDA3CE1FBE100B0013F95A /* HomekitAccessorySpy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6EDA3CD1FBE100B0013F95A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6EDA3E21FBE100B0013F95A /* LaunchScreen.storyboard in Resources */,
+				E6EDA3DF1FBE100B0013F95A /* Assets.xcassets in Resources */,
+				E6EDA3DA1FBE100B0013F95A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6EDA3CB1FBE100B0013F95A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6EDA4631FBE13950013F95A /* SHA3.cpp in Sources */,
+				E6EDA46B1FBE13950013F95A /* CTR.cpp in Sources */,
+				E6EDA4621FBE13950013F95A /* ChaCha.cpp in Sources */,
+				E6EDA3DD1FBE100B0013F95A /* HomekitAccessorySpy.xcdatamodeld in Sources */,
+				E6EDA45E1FBE13950013F95A /* AES128.cpp in Sources */,
+				E6EDA4731FBE13950013F95A /* GHASH.cpp in Sources */,
+				E6EDA4521FBE13950013F95A /* Hash.cpp in Sources */,
+				E6EDA4601FBE13950013F95A /* OFB.cpp in Sources */,
+				E6EDA4001FBE13230013F95A /* HAPTCPIPConnection.mm in Sources */,
+				E6EDA4571FBE13950013F95A /* RNG.cpp in Sources */,
+				E6EDA4581FBE13950013F95A /* Crypto.cpp in Sources */,
+				E6EDA47D1FBE13BA0013F95A /* mini-gmp.cpp in Sources */,
+				E6EDA46F1FBE13950013F95A /* KeccakCore.cpp in Sources */,
+				E6EDA4531FBE13950013F95A /* Ed25519.cpp in Sources */,
+				E6EDA45C1FBE13950013F95A /* CFB.cpp in Sources */,
+				E6EDA4681FBE13950013F95A /* SHA256.cpp in Sources */,
+				E6EDA4721FBE13950013F95A /* Curve25519.cpp in Sources */,
+				E6EDA4711FBE13950013F95A /* CBC.cpp in Sources */,
+				E6EDA3FA1FBE12DD0013F95A /* HASAddAccessoryTableViewController.mm in Sources */,
+				E6EDA4511FBE13950013F95A /* GCM.cpp in Sources */,
+				E6EDA46E1FBE13950013F95A /* Speck.cpp in Sources */,
+				E6EDA4541FBE13950013F95A /* XTS.cpp in Sources */,
+				E6EDA3E51FBE100B0013F95A /* main.m in Sources */,
+				E6EDA4691FBE13950013F95A /* SpeckSmall.cpp in Sources */,
+				E6EDA4761FBE13950013F95A /* BigNumberUtil.cpp in Sources */,
+				E6EDA4911FBE13DA0013F95A /* TLV8.cpp in Sources */,
+				E6EDA4671FBE13950013F95A /* ChaChaPoly.cpp in Sources */,
+				E6B4720B1FBF00A6004FDF70 /* HASAccessoryTableViewController.m in Sources */,
+				E6EDA4561FBE13950013F95A /* AuthenticatedCipher.cpp in Sources */,
+				E6EDA45A1FBE13950013F95A /* Cipher.cpp in Sources */,
+				E6EDA3D41FBE100B0013F95A /* HASAppDelegate.m in Sources */,
+				E6EDA4661FBE13950013F95A /* AES256.cpp in Sources */,
+				E6EDA45F1FBE13950013F95A /* BLAKE2b.cpp in Sources */,
+				E6EDA4771FBE13950013F95A /* SHAKE.cpp in Sources */,
+				E6DD65901FC4742B005128BD /* HASSetupCodeViewController.m in Sources */,
+				E6EDA46D1FBE13950013F95A /* Poly1305.cpp in Sources */,
+				E6EDA4591FBE13950013F95A /* SpeckTiny.cpp in Sources */,
+				E6EDA46A1FBE13950013F95A /* EAX.cpp in Sources */,
+				E6EDA4831FBE13C50013F95A /* SRP6aServer.cpp in Sources */,
+				E6EDA45D1FBE13950013F95A /* NoiseSource.cpp in Sources */,
+				E69A3C9B1FC1748900B3DAEA /* LEAProgressHUD.m in Sources */,
+				E6EDA46C1FBE13950013F95A /* BlockCipher.cpp in Sources */,
+				E6EDA4551FBE13950013F95A /* OMAC.cpp in Sources */,
+				E6EDA4741FBE13950013F95A /* BLAKE2s.cpp in Sources */,
+				E6421BC51FBF679B0077DC8F /* HASAccessoryViewController.mm in Sources */,
+				E6EDA4821FBE13C50013F95A /* SRP6aClient.cpp in Sources */,
+				E6EDA4751FBE13950013F95A /* GF128.cpp in Sources */,
+				E6EDA47A1FBE13B10013F95A /* HMAC+HKDF.cpp in Sources */,
+				E6EDA4701FBE13950013F95A /* XOF.cpp in Sources */,
+				E6EDA4641FBE13950013F95A /* AES192.cpp in Sources */,
+				E6EDA45B1FBE13950013F95A /* SHA512.cpp in Sources */,
+				E6EDA4651FBE13950013F95A /* AESCommon.cpp in Sources */,
+				E6EDA4611FBE13950013F95A /* P521.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E6EDA3D81FBE100B0013F95A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6EDA3D91FBE100B0013F95A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E6EDA3E01FBE100B0013F95A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6EDA3E11FBE100B0013F95A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6EDA3E61FBE100B0013F95A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E6EDA3E71FBE100B0013F95A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6EDA3E91FBE100B0013F95A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4GFM22NF6;
+				INFOPLIST_FILE = HomekitAccessorySpy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.LaborEtArs.HomekitAccessorySpy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6EDA3EA1FBE100B0013F95A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4GFM22NF6;
+				INFOPLIST_FILE = HomekitAccessorySpy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.LaborEtArs.HomekitAccessorySpy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6EDA3CA1FBE100B0013F95A /* Build configuration list for PBXProject "HomekitAccessorySpy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6EDA3E61FBE100B0013F95A /* Debug */,
+				E6EDA3E71FBE100B0013F95A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6EDA3E81FBE100B0013F95A /* Build configuration list for PBXNativeTarget "HomekitAccessorySpy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6EDA3E91FBE100B0013F95A /* Debug */,
+				E6EDA3EA1FBE100B0013F95A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E6EDA3DB1FBE100B0013F95A /* HomekitAccessorySpy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E6EDA3DC1FBE100B0013F95A /* HomekitAccessorySpy.xcdatamodel */,
+			);
+			currentVersion = E6EDA3DC1FBE100B0013F95A /* HomekitAccessorySpy.xcdatamodel */;
+			path = HomekitAccessorySpy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E6EDA3C71FBE100B0013F95A /* Project object */;
+}

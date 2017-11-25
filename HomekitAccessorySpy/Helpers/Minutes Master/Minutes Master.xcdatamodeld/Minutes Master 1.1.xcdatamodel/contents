@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="MMAssignment" representedClassName="MMAssignment" syncable="YES">
+        <attribute name="lastChanged" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="uuidString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MMContact" inverseName="assignments" inverseEntity="MMContact" syncable="YES"/>
+        <relationship name="topic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MMTopic" inverseName="assignments" inverseEntity="MMTopic" syncable="YES"/>
+    </entity>
+    <entity name="MMAttachment" representedClassName="MMAttachment" syncable="YES">
+        <attribute name="lastChanged" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="originalFilename" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storageFilenameLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="storageFilenamesiCloud" optional="YES" attributeType="Transformable" syncable="YES">
+            <userInfo>
+                <entry key="attributeValueClassName" value="NSDictionary"/>
+            </userInfo>
+        </attribute>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuidString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="topic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MMTopic" inverseName="attachments" inverseEntity="MMTopic" syncable="YES"/>
+    </entity>
+    <entity name="MMContact" representedClassName="MMContact" syncable="YES">
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contactType" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="countOfAssignments" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="countOfParticipations" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="countOfReferences" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="familyName" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="givenName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="initials" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastChanged" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="latestAssignment" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="latestParticipation" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="latestReference" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO">
+            <userInfo/>
+        </attribute>
+        <attribute name="uuidString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MMAssignment" inverseName="contact" inverseEntity="MMAssignment" syncable="YES"/>
+        <relationship name="participations" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MMParticipant" inverseName="contact" inverseEntity="MMParticipant" syncable="YES"/>
+    </entity>
+    <entity name="MMFolder" representedClassName="MMFolder" syncable="YES">
+        <attribute name="folderType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastChanged" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="uuidString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="children" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MMFolder" inverseName="parent" inverseEntity="MMFolder" syncable="YES"/>
+        <relationship name="notes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MMNote" inverseName="folder" inverseEntity="MMNote" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MMFolder" inverseName="children" inverseEntity="MMFolder" syncable="YES"/>
+    </entity>
+    <entity name="MMGroup" representedClassName="MMGroup" syncable="YES">
+        <attribute name="hidden" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastChanged" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="uuidString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="note" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MMNote" inverseName="groups" inverseEntity="MMNote" syncable="YES"/>
+        <relationship name="topics" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MMTopic" inverseName="group" inverseEntity="MMTopic" syncable="YES"/>
+    </entity>
+    <entity name="MMNote" representedClassName="MMNote" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" indexed="YES" syncable="YES"/>
+        <attribute name="deletedDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastChanged" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="options" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="uuidString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="folder" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MMFolder" inverseName="notes" inverseEntity="MMFolder" syncable="YES"/>
+        <relationship name="groups" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MMGroup" inverseName="note" inverseEntity="MMGroup" syncable="YES"/>
+        <relationship name="participants" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MMParticipant" inverseName="note" inverseEntity="MMParticipant" syncable="YES"/>
+    </entity>
+    <entity name="MMParticipant" representedClassName="MMParticipant" syncable="YES">
+        <attribute name="lastChanged" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="participationTypes" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="uuidString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MMContact" inverseName="participations" inverseEntity="MMContact" syncable="YES"/>
+        <relationship name="note" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MMNote" inverseName="participants" inverseEntity="MMNote" syncable="YES"/>
+    </entity>
+    <entity name="MMSearchSetMO" representedClassName="MMSearchSetMO" syncable="YES">
+        <attribute name="contact" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="contactsScope" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dueDateBegin" optional="YES" attributeType="Date" usesScalarValueType="NO" elementID="dueDate" syncable="YES"/>
+        <attribute name="dueDateEnd" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dueDateModifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="folderURI" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastChanged" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="noteDateBegin" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="noteDateEnd" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="noteDateModifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="noteOrderType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="searchSetType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="textScope" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="topicOrderType" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="uuidString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="topicTypes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MMTopicType" inverseName="searchSets" inverseEntity="MMTopicType" syncable="YES"/>
+    </entity>
+    <entity name="MMTopic" representedClassName="MMTopic" syncable="YES">
+        <attribute name="content" optional="YES" transient="YES" valueTransformerName="MMAttributedStringValueTransformer" syncable="YES"/>
+        <attribute name="contentAttributes" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="contentString" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="dueDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="lastChanged" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="uuidString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="assignments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MMAssignment" inverseName="topic" inverseEntity="MMAssignment" syncable="YES"/>
+        <relationship name="attachments" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MMAttachment" inverseName="topic" inverseEntity="MMAttachment" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MMGroup" inverseName="topics" inverseEntity="MMGroup" syncable="YES"/>
+        <relationship name="topicType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MMTopicType" inverseName="topics" inverseEntity="MMTopicType" syncable="YES"/>
+    </entity>
+    <entity name="MMTopicType" representedClassName="MMTopicType" syncable="YES">
+        <attribute name="imageDataAt1" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageDataAt2" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageDataAt3" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="lastChanged" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="nativeTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="order" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="stockIdentifier" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="userTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuidString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="searchSets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MMSearchSetMO" inverseName="topicTypes" inverseEntity="MMSearchSetMO" syncable="YES"/>
+        <relationship name="topics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MMTopic" inverseName="topicType" inverseEntity="MMTopic" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MMAssignment" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="MMAttachment" positionX="0" positionY="0" width="128" height="180"/>
+        <element name="MMContact" positionX="0" positionY="0" width="128" height="315"/>
+        <element name="MMFolder" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="MMGroup" positionX="0" positionY="0" width="128" height="165"/>
+        <element name="MMNote" positionX="0" positionY="0" width="128" height="195"/>
+        <element name="MMParticipant" positionX="9" positionY="117" width="128" height="150"/>
+        <element name="MMSearchSetMO" positionX="0" positionY="0" width="128" height="330"/>
+        <element name="MMTopic" positionX="0" positionY="0" width="128" height="225"/>
+        <element name="MMTopicType" positionX="9" positionY="117" width="128" height="225"/>
+    </elements>
+</model>
